@@ -20,13 +20,16 @@ export const Form = () => {
 
   async function handleFormSubmit(data) {
     console.log("data", data);
-    const response = await fetch("http://localhost:3000/submit-form", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "https://odd-cyan-wildebeest-kilt.cyclic.app/submit-form",
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     if (response.ok) {
       toast({
